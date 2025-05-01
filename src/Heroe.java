@@ -4,6 +4,13 @@ public class Heroe {
     private int nivelP;
     private String habilidad;
 
+    public Heroe() {
+        this.nombre = "Eso Tilin";
+        this.raza = "Humano";
+        this.nivelP = 100;
+        this.habilidad = "Bueno con las armas";
+    }
+
     public Heroe(String nombre, String raza, int nivelP, String habilidad) {
         this.nombre = nombre;
         this.raza = raza;
@@ -15,31 +22,42 @@ public class Heroe {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getRaza() {
         return raza;
     }
 
-    public void setRaza(String raza) {
-        this.raza = raza;
-    }
-
-    public int getNivelP() {
+    public int getNivelPoder() {
         return nivelP;
-    }
-
-    public void setNivelP(int nivelP) {
-        this.nivelP = nivelP;
     }
 
     public String getHabilidad() {
         return habilidad;
     }
 
-    public void setHabilidad(String habilidad) {
-        this.habilidad = habilidad;
+    public double calcularPoderTotal() {
+        double poder = nivelP;
+        switch (raza) {
+            case "Mutante":
+                poder *= 1.3;
+                break;
+            case "Alienígena":
+                poder *= 1.5;
+                break;
+            case "Humano":
+            default:
+                break;
+        }
+        return poder;
+    }
+
+
+    public void mostrarHeroe() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Raza: " + raza);
+        System.out.println("Nivel de Poder: " + nivelP);
+        System.out.println("Habilidad: " + habilidad);
+        System.out.println("Poder Total: " + calcularPoderTotal());
+        System.out.println("--------------------------");
     }
 }
+
