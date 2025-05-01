@@ -18,19 +18,19 @@ public class Heroe {
         this.habilidad = habilidad;
     }
 
-    public String getNombre() {
+    public String getnombre() {
         return nombre;
     }
 
-    public String getRaza() {
+    public String getraza() {
         return raza;
     }
 
-    public int getNivelPoder() {
+    public int getNivelpoder() {
         return nivelP;
     }
 
-    public String getHabilidad() {
+    public String gethabilidad() {
         return habilidad;
     }
 
@@ -57,7 +57,7 @@ public class Heroe {
         System.out.println("Nivel de Poder: " + nivelP);
         System.out.println("Habilidad: " + habilidad);
         System.out.println("Poder Total: " + calcularPoderTotal());
-        System.out.println("--------------------------");
+        System.out.println("********************");
     }
 }
 
